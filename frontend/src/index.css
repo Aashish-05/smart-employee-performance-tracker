@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+:root {
+  font-family: 'Inter', system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: dark;
+  color: rgba(255, 255, 255, 0.87);
+  
+  /* Animated Dark Gradient Background */
+  background: linear-gradient(-45deg, #0f0f1a, #1a1a2e, #16213e, #0f3460);
+  background-size: 400% 400%;
+  animation: gradientBG 15s ease infinite;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+}
+
+.main-content {
+  min-height: calc(100vh - 70px);
+  padding-top: 1rem;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Global Premium Input Styles */
+input {
+    width: 100%;
+    padding: 0.8rem 1rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    background-color: rgba(0, 0, 0, 0.2) !important;
+    color: white !important;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    box-shadow: inset 0 2px 4px rgba(0,0,0,0.1);
+}
+
+input:focus {
+    outline: none;
+    border-color: #e94560 !important;
+    background-color: rgba(0, 0, 0, 0.4) !important;
+    box-shadow: 0 0 0 3px rgba(233, 69, 96, 0.2), inset 0 2px 4px rgba(0,0,0,0.1) !important;
+}
+
+/* Premium Button Styles */
+.btn-primary {
+    background: linear-gradient(135deg, #e94560, #d1304d);
+    padding: 0.7rem 1.5rem;
+    border-radius: 8px;
+    color: white !important;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    transition: all 0.3s;
+    box-shadow: 0 4px 15px rgba(233, 69, 96, 0.3);
+}
+
+.btn-primary:hover:not(:disabled) {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(233, 69, 96, 0.4);
+}
+
+.btn-primary:active:not(:disabled) {
+    transform: translateY(0);
+}
+
+.btn-primary:disabled {
+    background: #4a2a35;
+    cursor: not-allowed;
+    opacity: 0.7;
+    box-shadow: none;
+}
+
+/* Scrollbar customization */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: rgba(0,0,0,0.2);
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(255,255,255,0.2);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255,255,255,0.3);
+}
